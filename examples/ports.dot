@@ -1,0 +1,40 @@
+digraph H {
+
+  parent [
+   shape=plaintext
+   label=<
+     <table border='1' cellborder='1'>
+       <tr><td colspan="3">The foo, the bar and the baz</td></tr>
+       <tr><td port='port_one'>First port</td><td port='port_two'>Second port</td><td port='port_three'>Third port</td></tr>
+     </table>
+  >];
+
+  child_one [
+   shape=plaintext
+   label=<
+     <table border='1' cellborder='0'>
+       <tr><td>1</td></tr>
+     </table>
+  >];
+
+  child_two [
+   shape=plaintext
+   label=<
+     <table border='1' cellborder='0'>
+       <tr><td>2</td></tr>
+     </table>
+  >];
+
+  child_three [
+   shape=plaintext
+   label=<
+     <table border='1' cellborder='0'>
+       <tr><td>3</td></tr>
+     </table>
+  >];
+
+  parent:port_one   -> child_one;
+  parent:port_two   -> child_two;
+  parent:port_three -> child_three;
+
+}
