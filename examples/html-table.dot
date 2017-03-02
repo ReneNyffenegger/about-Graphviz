@@ -2,6 +2,7 @@ digraph H {
 
   aHtmlTable [
    shape=plaintext
+   color=blue      // The color of the border of the table
    label=<
 
      <table border='1' cellborder='0'>
