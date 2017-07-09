@@ -1,0 +1,20 @@
+digraph MyGraph {
+
+  node [shape=box];
+
+  node_one [ label="Name of Graph: \G\nName of Node: \N\n "    ];
+
+  node_two;
+
+  node_one -> node_two [label="The Edge '\E' connecting node \H to node \T"];
+
+  subgraph clusterBlaBla {
+
+    label="Cluster (subgraph): \G";
+
+    node_three;
+
+  };
+
+
+}
