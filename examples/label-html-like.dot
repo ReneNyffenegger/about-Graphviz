@@ -1,11 +1,10 @@
 digraph D {
 
   label = <The <font color='red'><b>foo</b></font>,<br/> the <font point-size='20'>bar</font> and<br/> the <i>baz</i>>;
-  labelloc = "t"; // place the labe at the top (b seems to be default)
+  labelloc = "t"; // place the label at the top (b seems to be default)
 
   node [shape=plaintext]
 
   FOO -> {BAR, BAZ};
-
 
 }
