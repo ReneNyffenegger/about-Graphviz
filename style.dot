@@ -1,0 +1,28 @@
+digraph S {
+
+   //
+   // style= attribute controls aspects of nodes and edges.
+   // The value of this attribute is a comma seperated
+   // list of primitives with optional arguments.
+   //
+
+   solid  -> dashed    [ style=solid  label=solid  ];
+   dashed -> dotted    [ style=dashed label=dashed ];
+   dotted -> bold      [ style=dotted label=dotted ];
+   bold   -> invis     [ style=bold   label=bold   ];
+   solid  -> diagonals [ style=invis  label=invis  ];
+
+   solid     [ style = solid     ];
+   dashed    [ style = dashed    ];
+   dotted    [ style = dotted    ];
+   bold      [ style = bold      ];
+   invis     [ style = invis     ];
+   filled    [ style = filled    ];
+
+   diagonals [ style = diagonals ];
+   rounded   [ style = rounded   ];
+
+ { rank=same solid dashed dotted bold  invis filled}
+ { rank=same diagonals rounded }
+
+}
