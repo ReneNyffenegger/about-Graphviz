@@ -1,0 +1,33 @@
+#define CONCAT(a, b) a ## b
+
+#define ARROW(nFrom, nTo, type) nFrom -> nTo [ arrowhead=type label=type]
+
+#define ARROW_TYPE__(nFrom, nTo, type) ARROW(nFrom, nTo, type)
+#define ARROW_TYPE_(cntFrom, cntTo, type) ARROW_TYPE__(CONCAT(n, cntFrom), CONCAT(n, cntTo), type)
+#define ARROW_TYPE(type) ARROW_TYPE_(__COUNTER__, __COUNTER__, type)
+
+
+#define ARROW_TYPE2__(nFrom, nMiddle, nEnd, type1, type2)  ARROW(nFrom, nMiddle, type1) ARROW(nMiddle, nEnd, type2)
+#define ARROW_TYPE2_(cntFrom, cntMiddle, cntEnd, type1, type2) ARROW_TYPE2__(CONCAT(n, cntFrom), CONCAT(n, cntMiddle), CONCAT(n, cntEnd), type1, type2)
+#define ARROW_TYPE2(type1, type2) ARROW_TYPE2_(__COUNTER__, __COUNTER__, __COUNTER__, type1, type2)
+
+digraph X {
+
+   rankdir = LR
+
+   node [ shape=none label="" ]
+   edge [ dir=forward ]
+
+   ARROW_TYPE(vee)
+   ARROW_TYPE2(open   , halfopen)
+   ARROW_TYPE2(box    , obox)
+   ARROW_TYPE(diamond)
+   ARROW_TYPE2(diamond, odiamond)
+   ARROW_TYPE2(empty  ,  invempty)
+   ARROW_TYPE(tee)
+   ARROW_TYPE(none)
+   ARROW_TYPE2(odot   ,  invodot)
+   ARROW_TYPE2(dot    ,  invdot )
+   ARROW_TYPE2(normal , inv    )
+
+}
