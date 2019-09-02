@@ -1,0 +1,41 @@
+digraph G {
+
+   rankdir = LR
+
+   node [shape   = box ]
+
+   filled_node  [ fillcolor=orange style=filled ] // style=filled necessary for fillColor
+   colored_node [ color="#0000aa"               ]
+
+   subgraph cluster_with_pencolor {
+
+     label    ="Cluster with pencolor"
+     style    = rounded
+     pencolor = violetred3
+
+     node_with_color [ color = violetred1 ];
+
+   }
+
+   subgraph cluster_with_color {
+
+     label     ="Cluster with color"
+     style     = rounded
+     color     = chartreuse
+
+     another_node_with_color ;
+
+   }
+
+   subgraph cluster_with_bgcolor {
+
+     label     ="Cluster with fillcolor"
+     style     = rounded filled
+     bgcolor   = beige  // fillcolor does not seem to work here!
+
+     yet_another_node
+
+   }
+   colored_node -> node_with_color [ color = darkorchid3 ]
+
+}
