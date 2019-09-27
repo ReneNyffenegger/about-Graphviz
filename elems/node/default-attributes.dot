@@ -1,0 +1,6 @@
+digraph DefAttr {
+
+   N1
+   N2 [ shape=ellipse, width=.75, height=.5 label="\N" ]
+
+}
