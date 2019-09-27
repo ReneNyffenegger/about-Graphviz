@@ -1,0 +1,18 @@
+digraph RecordShapedNodes {
+
+   rec_horizontal [ shape=record label="Vertical bars|seperate|the individual field" ]
+
+   rec_vertical   [ shape=record label="The initial|{orientation|(top down|or left right)}|{is dependent|{on the|value}|{of|rankdir}|and can be|changed with curly braces}}"]
+
+   rec_Mrecord    [ shape=Mrecord label="{An Mrecord|has rounded|corners}" ]
+
+   rec_ports_1    [ shape=record  label="{ports|<from_2>to connect}|{allow|<to_1>fields and/or nodes}" ]
+
+   rec_ports_2    [ shape=record  label="foo|<to_2>bar|baz}" ]
+
+   rec_horizontal -> rec_vertical -> rec_Mrecord[ style=invis ]
+
+   rec_Mrecord -> rec_ports_1:to_1
+   rec_ports_1:from_2 -> rec_ports_2:to_2
+
+}
