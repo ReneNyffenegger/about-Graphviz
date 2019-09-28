@@ -1,0 +1,37 @@
+digraph SomeShapes {
+
+  edge         [ style=invis        ]
+
+// 1
+  none         [ shape=none         ]
+  point        [ shape=point        ]
+  box          [ shape=box          ]
+
+// 2
+  plain        [ shape=plain        ] // Does not work with dot version 2.38
+  ellipse        // default
+  square       [ shape=square       ]
+
+// 3
+  underline    [ shape=underline    ]
+  circle       [ shape=circle       ]
+  record       [ shape=record  label="{record|record based node}"  ]
+
+
+
+// 4
+// ...
+  doublecircle [ shape=doublecircle ]
+  Mrecord      [ shape=Mrecord label="{Mrecord|record based node}" ]
+
+// 5
+// ..
+  cylinder     [ shape=cylinder     ] // Does not work with dot version 2.38
+
+
+
+  none    -> plain   -> underline
+  point   -> ellipse -> circle     -> doublecircle -> cylinder
+  box     -> square  ->  record    -> Mrecord
+
+}
