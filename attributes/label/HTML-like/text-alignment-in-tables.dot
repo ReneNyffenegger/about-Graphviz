@@ -1,0 +1,15 @@
+digraph H {
+
+  node [ shape=box fontname=Helvetica ]
+
+  table [ label = <
+    <table border="0">
+       <tr><td align="text">By default, td text is center-aligned</td></tr>
+       <tr><td align="text">This td is left aligned<br align="left" /></td></tr>
+       <tr><td align="text">this one centered<br align="center" /></td></tr>
+       <tr><td align="text">and this one right aligned<br align="right" /><br align="right"/></td></tr>
+       <tr><td align="text">The value of a closing<br align="left"/>&lt;br/&gt; tag<br align="center"/>refers to the preceeding text<br align="right"/></td></tr>
+    </table>
+  > ]
+
+}
