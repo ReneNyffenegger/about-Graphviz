@@ -1,0 +1,47 @@
+digraph COLORS {
+
+   node [ shape = box ]
+
+   red          [     color="red"                                     ] // X11: Default color scheme
+   blue         [     color="blue"                   colorscheme=X11  ]
+
+   rgb          [ fillcolor="#ffbb33"   style=filled                  ]
+   rgba         [ fillcolor="#ffbb3344" style=filled                  ]
+
+   hsv_0        [ fillcolor="1 0.2 1"   style=filled                  ]
+   hsv_1        [ fillcolor="1 0.4 1"   style=filled                  ]
+   hsv_2        [ fillcolor="1 0.6 1"   style=filled                  ]
+   hsv_3        [ fillcolor="1 0.8 1"   style=filled                  ]
+   hsv_4        [ fillcolor="1 1.0 1"   style=filled                  ]
+
+   tomato       [ fontcolor="tomato"    shape=none                    ]
+   tomato1      [ fontcolor="tomato1"   shape=none                    ]
+   tomato2      [ fontcolor="tomato2"   shape=none                    ]
+   tomato3      [ fontcolor="tomato3"   shape=none                    ]
+   tomato4      [ fontcolor="tomato4"   shape=none                    ]
+
+   hotpink_x11  [ fillcolor="hotpink"   style=filled                  ]
+   hotpink_svg  [ fillcolor="hotpink"   style=filled colorscheme=SVG  ]
+
+   hotpink1_x11 [ fillcolor="hotpink1"  style=filled                  ]
+   hotpink1_svg [ fillcolor="hotpink1"  style=filled colorscheme=SVG  ] // Warning: hotpink1 is not a known color.
+
+   hotpink2_x11 [ fillcolor="hotpink2"  style=filled                  ]
+   hotpink3_x11 [ fillcolor="hotpink3"  style=filled                  ]
+   hotpink4_x11 [ fillcolor="hotpink4"  style=filled                  ]
+
+   reds5_1      [ fillcolor=1           style=filled colorscheme=reds5]
+   reds5_2      [ fillcolor=2           style=filled colorscheme=reds5]
+   reds5_3      [ fillcolor=3           style=filled colorscheme=reds5]
+   reds5_4      [ fillcolor=4           style=filled colorscheme=reds5]
+   reds5_5      [ fillcolor=5           style=filled colorscheme=reds5]
+
+   red         -> blue                                                         [ style=invis ]
+   rgb         -> rgba                                                         [ style=invis ]
+   hsv_0       -> hsv_1        -> hsv_2        -> hsv_3        -> hsv_4        [ style=invis ]
+   tomato      -> tomato1      -> tomato2      -> tomato3      -> tomato4      [ style=invis ]
+   hotpink_x11 -> hotpink1_x11 -> hotpink2_x11 -> hotpink3_x11 -> hotpink4_x11 [ style=invis ]
+   hotpink_svg -> hotpink1_svg                                                 [ style=invis ]
+   reds5_1     -> reds5_2      -> reds5_3      -> reds5_4      -> reds5_5      [ style=invis ]
+
+}
