@@ -1,0 +1,6 @@
+digraph XYZ {
+                       { A -> B }
+  subgraph             { C -> D } 
+  subgraph named       { E -> F }
+  subgraph cluster_xyz { G -> H }
+}
