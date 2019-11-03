@@ -1,13 +1,15 @@
 digraph L {
 
    subgraph {
+   // This label has no effect:
       label = left
       L1 -> L2
    }
 
    subgraph cluster_R {
+   // This label is in a cluster, so it
+   // has an effect and labels the cluster:
       label = right
-
       R1 -> R2
    }
 }
