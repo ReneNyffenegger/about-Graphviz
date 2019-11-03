@@ -1,0 +1,33 @@
+digraph A {
+
+//
+// Specify an attribute outside of any subgraph.
+// It affects all nodes in the intere graph
+   node [shape=box]
+
+   {
+   //
+   // Specifiy a couple of attributes that
+   // affect only the nodes within the
+   // current subgraph:
+   //
+      node [color=blue fontcolor=blue]
+      A
+      B
+   }
+   {
+   //
+   // Again, a couple of attributes for
+   // one subgraph only:
+   //
+      node [color=red  fontcolor=red ]
+      C
+      D
+   }
+
+//
+// The following node has only the
+// shape attribute overridden:
+//
+   X
+}
