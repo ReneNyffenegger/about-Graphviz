@@ -1,0 +1,13 @@
+digraph L {
+
+   subgraph {
+      label = left
+      L1 -> L2
+   }
+
+   subgraph cluster_R {
+      label = right
+
+      R1 -> R2
+   }
+}
