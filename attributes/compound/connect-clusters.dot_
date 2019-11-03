@@ -1,0 +1,37 @@
+digraph {
+
+   compound=COMPOUND
+
+   subgraph cluster_A {
+      a1 -> a2
+      a1 -> a3
+      a2 -> a4
+      a3 -> a5
+   }
+
+   subgraph cluster_B {
+      b1 -> b3
+      b2 -> b4
+      b3 -> b5
+      b4 -> b5
+   }
+
+   subgraph cluster_C {
+      c1 -> c2
+      c1 -> c3
+      c3 -> c4
+      c3 -> c5
+   }
+
+   subgraph cluster_D {
+      d1 -> d2
+      d1 -> d3
+      d2 -> d4
+      d2 -> d5
+   }
+
+
+   a5 -> c1 [ltail=cluster_A lhead=cluster_C]
+   b5 -> d1 [ltail=cluster_B lhead=cluster_D]
+
+}
