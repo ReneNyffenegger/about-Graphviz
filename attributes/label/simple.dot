@@ -1,0 +1,17 @@
+digraph {
+
+   label     = "The title of the graph"
+   labelloc  =  t // t: Place the graph's title on top.
+   fontsize  = 30 // Make title stand out by giving a large font size
+   fontcolor = blue
+
+   node   [ shape = rect ]
+
+   node_1 [ label = "text for a first node" ]
+   node_2 [ label = "text for a second node" ]
+
+// Start label text with a space so
+// it doesn't get rendered too close to the edge.
+   node_1 -> node_2 [ label = " label for edge"]
+
+}
