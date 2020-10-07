@@ -1,0 +1,18 @@
+digraph {
+
+  node [ shape=none fontname=Helvetica ]
+
+  n [ label = <
+    <table border="3" bgcolor="red" color="yellow">
+       <tr>
+         <td bgcolor="#ffcccc">one</td>
+         <td bgcolor="#ccccff" color="green">two</td> <!-- Note the color attribute -->
+       </tr>
+       <tr>
+         <td bgcolor="#ccffcc">three</td>
+         <td bgcolor="#ffffcc">four</td>
+      </tr>
+    </table>
+  > ]
+
+}
