@@ -1,0 +1,42 @@
+digraph {
+
+  node [ shape=none fontname=Helvetica ]
+
+  n1 [ label = <
+    <table>
+       <tr><td colspan="2" bgcolor="Peru">not spec.</td></tr>
+       <tr><td bgcolor="yellow">one  </td><td bgcolor="orange">two </td></tr>
+       <tr><td bgcolor="red">three</td><td bgcolor="#77ff33">four</td></tr>
+    </table>
+  > ]
+
+  n2 [ label = <
+    <table border="0">
+       <tr><td colspan="2" bgcolor="Peru">border="0"</td></tr>
+       <tr><td bgcolor="yellow">one  </td><td bgcolor="orange">two </td></tr>
+       <tr><td bgcolor="red">three</td><td bgcolor="#77ff33">four</td></tr>
+    </table>
+  > ]
+
+  n3 [ label = <
+    <table border="1">
+       <tr><td colspan="2" bgcolor="Peru">border="1"</td></tr>
+       <tr><td bgcolor="yellow">one  </td><td bgcolor="orange">two </td></tr>
+       <tr><td bgcolor="red">three</td><td bgcolor="#77ff33">four</td></tr>
+    </table>
+  > ]
+
+  n4 [ label = <
+    <table border="5">
+       <tr><td colspan="2" bgcolor="Peru">border="5"</td></tr>
+       <tr><td bgcolor="yellow">one  </td><td bgcolor="orange">two </td></tr>
+       <tr><td bgcolor="red">three</td><td bgcolor="#77ff33">four</td></tr>
+    </table>
+  > ]
+
+  {rank=same n1 n2}
+  {rank=same n3 n4}
+
+  n1 -> n3 [ style = invis ]
+
+}
