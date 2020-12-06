@@ -3,10 +3,9 @@ digraph X {
    node [ shape = box ]
 
    node_1 [ fillcolor=bisque  style=filled label="style=filled and fillcolor" ]
-   node_2 [   bgcolor=red     style=filled label="style=filed and bgcolor"    ] // bgcolor is not respected, color will be grey
-   node_3 [ fillcolor=bisque               label="no style and fillcolor"     ]
-   node_4 [   bgcolor=red                  label="no style and bgcolor"       ]
+   node_2 [   bgcolor=red     style=filled label="style=filled and bgcolor"   ] // bgcolor is not respected, color will be grey
+   node_3 [ fillcolor=bisque               label="no style but fillcolor"     ]
+   node_4 [   bgcolor=red                  label="no style but bgcolor"       ]
 
    node_1 -> node_2 -> node_3 -> node_4 [ style=invis ]
-
 }
